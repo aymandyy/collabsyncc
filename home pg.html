@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollabSync</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #c1c1c1, #808080);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 36px;
+            color: #222;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "\2022";
+            color: #555;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .contact {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .contact button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to CollabSync</h1>
+        </div>
+
+        <div class="section" id="what-is-collabsync">
+            <h2>What is CollabSync?</h2>
+            <ul>
+                <li>A platform to connect mentors and students seamlessly.</li>
+                <li>Facilitates knowledge sharing and guidance.</li>
+                <li>Encourages collaboration for skill development.</li>
+                <li>Provides a structured way to learn and teach.</li>
+                <li>Helps in building professional networks.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="how-it-works">
+            <h2>How It Works</h2>
+            <ul>
+                <li>Sign up as a student or mentor.</li>
+                <li>Set up your profile with relevant details.</li>
+                <li>Search or get matched with mentors/students.</li>
+                <li>Collaborate through guided sessions and projects.</li>
+                <li>Track progress and achieve goals effectively.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="how-is-it-useful">
+            <h2>How Is It Useful?</h2>
+            <ul>
+                <li>Bridges the gap between learners and experts.</li>
+                <li>Encourages skill enhancement and career growth.</li>
+                <li>Offers a structured mentoring system.</li>
+                <li>Provides flexible collaboration opportunities.</li>
+                <li>Boosts confidence through guided learning.</li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <a href="student login page2.html" class="button">Signup/Login as Student</a>
+            <a href="mentor login page3.html" class="button">Signup/Login as Mentor</a>
+        </div>
+
+        <div class="contact">
+            <button>Contact Us</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - CollabSync</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://files.oaiusercontent.com/file-B5k81WkSnpFXLwqVTSTRtA?se=2024-12-20T20%3A14%3A01Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dfa674e27-fade-4c71-a23b-6ff916e4a7a2.webp&sig=cUIt1bzipFf%2Begx6oWvv%2Bw1dyt4aPQGy2K6XTtrWm8k%3D') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .sidebar button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .sidebar button:hover {
+            background: #555;
+        }
+
+        .main-content {
+            margin-left: 270px;
+            width: calc(100% - 270px);
+            padding: 20px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card:nth-child(1) {
+            background: #1abc9c;
+        }
+
+        .card:nth-child(2) {
+            background: #3498db;
+        }
+
+        .card:nth-child(3) {
+            background: #e67e22;
+        }
+
+        .card:nth-child(4) {
+            background: #9b59b6;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="https://www.orfonline.org/public/uploads/posts/image/modi-black-mr1.jpg" alt="Profile Image">
+        <button>Edit Profile</button>
+        <button>Track Your Progress</button>
+        <button>Your Approaches</button>
+    </div>
+
+    <div class="main-content">
+        <h1>Student Dashboard</h1>
+        <div class="dashboard">
+            <div class="card">
+                <h2>Ask a Query</h2>
+                <ul>
+                    <li>Post your questions.</li>
+                    <li>Get answers from mentors and peers.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Create a Team</h2>
+                <ul>
+                    <li>Form project groups.</li>
+                    <li>Collaborate on ideas together.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Find Team Members/Mentors</h2>
+                <ul>
+                    <li>Search for skilled individuals.</li>
+                    <li>Connect with experienced mentors.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Trending Hackathons</h2>
+                <ul>
+                    <li>Stay updated on events.</li>
+                    <li>Participate and showcase your skills.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact">
+            <p>Need help? <a href="#">Contact Us</a></p>
+        </div>
+    </div>
+</body>
+</html>

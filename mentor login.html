@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollabSync - Signup/Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #c1c1c1, #808080);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #444;
+            font-weight: bold;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #007BFF;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="form-container">
+        <h1 id="form-title">Signup/login</h1>
+        <form id="signup-form">
+            <label for="name">Enter Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Enter Email or Phone Number:</label>
+            <input type="text" id="email" placeholder="Enter your email or phone number" required>
+
+            <label for="locality">Enter Locality:</label>
+            <input type="text" id="locality" placeholder="Enter your locality" required>
+
+            <label for="skills">Enter Skills:</label>
+            <input type="text" id="skills" placeholder="Enter your skills" required>
+
+            <label for="qualification">Enter Qualification:</label>
+            <input type="text" id="qualification" placeholder="Enter your qualification" required>
+
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" placeholder="Create a password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <form id="login-form" style="display: none;">
+            <label for="login-email">Enter Email or Phone Number:</label>
+            <input type="text" id="login-email" placeholder="Enter your email or phone number" required>
+
+            <label for="login-password">Enter Password:</label>
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="toggle-link" id="toggle-link">Already have an account? Login</div>
+    </div>
+
+    <script>
+        const signupForm = document.getElementById('signup-form');
+        const loginForm = document.getElementById('login-form');
+        const toggleLink = document.getElementById('toggle-link');
+        const formTitle = document.getElementById('form-title');
+
+        toggleLink.addEventListener('click', () => {
+            if (signupForm.style.display === 'none') {
+                signupForm.style.display = 'block';
+                loginForm.style.display = 'none';
+                formTitle.textContent = 'Signup';
+                toggleLink.textContent = 'Already have an account? Login';
+            } else {
+                signupForm.style.display = 'none';
+                loginForm.style.display = 'block';
+                formTitle.textContent = 'Login';
+                toggleLink.textContent = "Don't have an account? Sign Up";
+            }
+        });
+    </script>
+</body>
+</html>

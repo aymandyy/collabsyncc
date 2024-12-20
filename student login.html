@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollabSync - Signup & Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #c1c1c1, #808080);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+            width: 100%;
+            max-width: 400px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        input:focus {
+            border-color: #007BFF;
+        }
+        .button {
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .toggle {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .toggle a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .toggle a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="form-container">
+        <h1>Signup</h1>
+        <form id="signup-form">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" placeholder="Enter your email" required>
+
+            <label for="signup-password">Create Password</label>
+            <input type="password" id="signup-password" placeholder="Create your password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+
+            <a href="student dashboard4.html" class="button">Sign Up </a>
+        </form>
+
+        <div class="toggle">
+            <p>Already have an account? <a href="#" onclick="toggleForm('login')">Login here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(type) {
+            const container = document.getElementById('form-container');
+
+            if (type === 'login') {
+                container.innerHTML = `
+                    <h1>Login</h1>
+                    <form id="login-form">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Enter your email" required>
+
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required>
+
+                        <button type="submit" class="button">Login</button>
+                    </form>
+
+                    <div class="toggle">
+                        <p>Don’t have an account? <a href="#" onclick="toggleForm('signup')">Sign up here</a></p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <h1>Signup</h1>
+                    <form id="signup-form">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+
+                        <label for="signup-password">Create Password</label>
+                        <input type="password" id="signup-password" placeholder="Create your password" required>
+
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+
+                        <button type="submit" class="button">Sign Up</button>
+                    </form>
+
+                    <div class="toggle">
+                        <p>Already have an account? <a href="#" onclick="toggleForm('login')">Login here</a></p>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
